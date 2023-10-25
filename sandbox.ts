@@ -1,9 +1,19 @@
-const character = 'mario';
+let character = 'mario';
+let age = 30;
+let isBlackBelt = false;
 
-console.log(character);
+// character = 20;
+character = 'luigi';
 
-const inputs = document.querySelectorAll('input');
+// age = 'yoshi';
+age = 40;
 
-inputs.forEach(input => {
-    console.log(input);
-});
+// isBlackBelt = 'yes';
+isBlackBelt = true;
+
+const circle = (daiameter: number) => {
+    return daiameter * Math.PI;
+}
+
+// console.log(circle('hello'));
+console.log(circle(7.5));
