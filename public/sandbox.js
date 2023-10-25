@@ -1,17 +1,10 @@
 "use strict";
-let greet;
-// greet = 'hello';
-greet = () => {
-    return ('hello, again');
+const logDetails = (uid, item) => {
+    console.log(`${item} has a uid of ${uid}`);
 };
-console.log(greet());
-const add = (a, b, c /*?*/ = 10) => {
-    console.log(a + b);
-    console.log(c);
+logDetails(12345, "TV");
+const greet = (user) => {
+    console.log(`${user.name} say hello`);
 };
-add(5, 10, 'ninja');
-const minus = (a, b) => {
-    return a + b;
-};
-let result = minus(10, 7);
-console.log(result);
+greet({ name: "Ghafor Sabury", uid: 7875097654 });
+greet({ name: "Mohammad Karimi", uid: '9097' });
