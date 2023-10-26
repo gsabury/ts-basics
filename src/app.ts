@@ -1,5 +1,5 @@
 "use strict";
-var anchor = document.querySelector('a') as HTMLAnchorElement;
+// var anchor = document.querySelector('a') as HTMLAnchorElement;
 // if (anchor) {
 //     console.log(anchor.href);
 // }
@@ -7,30 +7,46 @@ var anchor = document.querySelector('a') as HTMLAnchorElement;
 //const form = document.querySelector('form')!;
 
 
+import { Invoice } from "./classes/Invoice.js";
 
-// classes
-class Invoice {
-    // readonly client: string;
-    // private details: string;
-    // public amount: number;
-
-    // constructor(c: string, d: string, a: number) {
-    //     this.client = c;
-    //     this.details = d;
-    //     this.amount = a;
-    // }
-
-    constructor(
-        readonly client: string, 
-        private details: string, 
-        public amount: number,
-      ){}
-      
-
-    format() {
-        return `${this.client} owes £${this.amount} for ${this.details}`;
-    }
+// interfaces
+export interface IsPerson {
+    name: string;
+    age?: number;
+    speak(a: string): void;
+    spend(a: number): number;
 }
+
+const me: IsPerson = {
+    name: 'Ghafor Sabury',
+    age: 30,
+    speak(lang: string): string {
+        return lang;
+    },
+    spend(amount: number): number {
+        return amount;
+    },
+};
+console.log(`${me.name} is ${me.age} years old, he can speak ${me.speak("English")} and spent ${me.spend(100)}$ every day`);
+
+
+const someone: IsPerson = {
+    name: 'Fahim',
+    age: 36,
+    speak(lang: string): string {
+        return lang;
+    },
+    spend(amount: number): number {
+        return amount;
+    },
+};
+
+const greetPerson = (person: IsPerson): void => {
+    console.log(`${person.name} is ${person.age} years old, he can speak ${person.speak("English")} and spent ${person.spend(200)}$ every day`);
+}
+
+greetPerson(someone);
+
 
 const invOne = new Invoice('mario', 'work on the mario website', 250);
 const invTwo = new Invoice('luigi', 'work on the luigi website', 300);
