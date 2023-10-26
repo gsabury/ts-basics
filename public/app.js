@@ -1,10 +1,10 @@
 "use strict";
 import { Invoice } from './classes/Invoice.js';
 import { Payment } from './classes/Payment.js';
-let docOne;
-let docTwo;
-docOne = new Invoice('yoshi', 'web work', 250);
-docTwo = new Payment('mario', 'plumbing', 200);
+// let docOne: HasFormatter;
+// let docTwo: HasFormatter;
+// docOne = new Invoice('yoshi', 'web work', 250);
+// docTwo = new Payment('mario', 'plumbing', 200);
 // console.log(docOne.format());
 // console.log(docTwo.format());
 // let docs: HasFormatter[] = [];
