@@ -1,15 +1,17 @@
 export class ListTemplate {
+    // Create constructor which take html ul element
     constructor(container) {
         this.container = container;
     }
+    // render() takes three params: item, heading, pos
     render(item, heading, pos) {
         // Create li element
         const li = document.createElement('li');
         // Create h4 element
         const h4 = document.createElement('h4');
-        // Move heading into h4
+        // Put heading into h4
         h4.innerText = heading;
-        // Append h4 at beginning of li
+        // Append h4 at beginning of li(inside of li)
         li.append(h4);
         // Create p element 
         const p = document.createElement('p');

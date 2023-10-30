@@ -3,9 +3,8 @@ import { Payment } from './classes/Payment.js';
 import { ListTemplate } from './classes/ListTemplate.js';
 import { HasFormatter } from './interfaces/HasFormatter.js';
 
+// get form and inputs
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
-
-// inputs
 const type = document.querySelector('#type') as HTMLInputElement;
 const tofrom = document.querySelector('#tofrom') as HTMLInputElement;
 const details = document.querySelector('#details') as HTMLInputElement;
@@ -33,16 +32,22 @@ form.addEventListener('submit', (e: Event) => {
 });
 
 
-// TUPLES
-let arr = ['ryu', 25, true];
-arr[0] = false;
-arr[1] = 'yoshi';
-arr = [30, false, 'yoshi'];
+// Generics
 
-let tup: [string, number, boolean] = ['ryu', 25, true];
-// tup[0] = false;
-tup[0] = 'ken';
+// Function in normal way
+// function printData(data: number | string | boolean) {
+//     console.log("Data: ", data);
+// }
+// printData(80);
+// printData("Hello, good morning");
+// printData(true);
 
-let student: [string, number];
-//student = [23564, 'chun-li'];
-student = ['chun-li', 23564];
+// function printData<T>(data: T) {
+//     console.log("Data", data);
+// }
+// printData(80);
+// printData("Hello, good morning");
+// printData(true);
+// printData({ name: "Ali", age: 20, phone: "0787509653" });
+// printData([1, 2, 3, 4]);
+// printData([1, 2, 3, "Book"]);

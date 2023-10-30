@@ -1,8 +1,8 @@
 import { Invoice } from './classes/Invoice.js';
 import { Payment } from './classes/Payment.js';
 import { ListTemplate } from './classes/ListTemplate.js';
+// get form and inputs
 const form = document.querySelector('.new-item-form');
-// inputs
 const type = document.querySelector('#type');
 const tofrom = document.querySelector('#tofrom');
 const details = document.querySelector('#details');
@@ -23,14 +23,20 @@ form.addEventListener('submit', (e) => {
     }
     list.render(doc, type.value, 'end');
 });
-// TUPLES
-let arr = ['ryu', 25, true];
-arr[0] = false;
-arr[1] = 'yoshi';
-arr = [30, false, 'yoshi'];
-let tup = ['ryu', 25, true];
-// tup[0] = false;
-tup[0] = 'ken';
-let student;
-//student = [23564, 'chun-li'];
-student = ['chun-li', 23564];
+// Generics
+// Function in normal way
+// function printData(data: number | string | boolean) {
+//     console.log("Data: ", data);
+// }
+// printData(80);
+// printData("Hello, good morning");
+// printData(true);
+// function printData<T>(data: T) {
+//     console.log("Data", data);
+// }
+// printData(80);
+// printData("Hello, good morning");
+// printData(true);
+// printData({ name: "Ali", age: 20, phone: "0787509653" });
+// printData([1, 2, 3, 4]);
+// printData([1, 2, 3, "Book"]);

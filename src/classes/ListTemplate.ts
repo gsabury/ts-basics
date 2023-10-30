@@ -2,8 +2,10 @@ import { HasFormatter } from "../interfaces/HasFormatter";
 
 export class ListTemplate {
 
+    // Create constructor which take html ul element
     constructor(private container: HTMLUListElement) { }
 
+    // render() takes three params: item, heading, pos
     render(item: HasFormatter, heading: string, pos: 'start' | 'end') {
 
         // Create li element
@@ -12,10 +14,10 @@ export class ListTemplate {
         // Create h4 element
         const h4 = document.createElement('h4');
 
-        // Move heading into h4
+        // Put heading into h4
         h4.innerText = heading;
 
-        // Append h4 at beginning of li
+        // Append h4 at beginning of li(inside of li)
         li.append(h4);
 
         // Create p element 
